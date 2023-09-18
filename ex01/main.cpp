@@ -26,7 +26,7 @@ int main (void)
 			{
 				std::cout << "Please input index for 1 to 8" << std::endl;
 				if(!std::getline(std::cin, cmd))
-				std::exit(EXIT_FAILURE);
+					std::exit(EXIT_FAILURE);
 				if(!book.printAllInfo(cmd))
 					continuous = true;
 				else
