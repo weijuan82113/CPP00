@@ -7,7 +7,10 @@
 
 void PhoneBook::add(int i)
 {
-	contact[i].setInfo();
+	for ( ;!contact[i].setInfo(); )
+	{
+		std::cout << RED << "Can not input empty field" << RESET << std::endl;
+	};
 }
 
 Contact PhoneBook::getContact(int i)
@@ -40,13 +43,12 @@ std::string PhoneBook::truncate(std::string str)
 	return (str);
 }
 
-bool PhoneBook::printAllInfo(std::string input_index)
+bool PhoneBook::printAllInfo(int index)
 {
-	int index = std::stoi(input_index);
-	if (index > 8 || index < 1)
+	if(8 < index || index < 1)
 	{
-		std::cout << "Wrong index!" << std::endl;
-		return (false);
+		std::cout <<  RED << "Wrong index!" << RESET << std::endl;
+		return(false);
 	}
 	index -= 1;
 	std::cout << "Index:" << index + 1 << std::endl;

@@ -1,16 +1,11 @@
 #include <iostream>
-#include <cctype>
-#include <cstring>
-#include <cstdio>
+#include <string>
 
 int main(int argc, char *argv[])
 {
 	(void)argc;
-	if (argv)
-		for (size_t i = 0; i < strlen(argv[1]); i ++)
-			putchar(toupper(argv[1][i]));
-	std::cout << '\n';
-	return 0;
+	std::string str(argv[1]);
+	std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+	std::cout << str << std::endl;
+	return(0);
 }
-
-
