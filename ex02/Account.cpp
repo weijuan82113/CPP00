@@ -8,7 +8,7 @@ int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
-Account::Account(int initial_deposit)
+Account::Account(int initial_deposit) : _accountIndex(0),_amount(0),_nbDeposits(0),_nbWithdrawals(0)
 {
 	this->_amount = initial_deposit;
 	this->_accountIndex = _nbAccounts;

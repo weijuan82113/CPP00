@@ -21,7 +21,7 @@ class PhoneBook
 		Contact getContact(int i);
 		void printInfo();
 		std::string truncate(std::string str);
-		bool printAllInfo(int index);
+		bool printAllInfo(std::string index);
 
 	private:
 

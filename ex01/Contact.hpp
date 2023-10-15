@@ -8,6 +8,7 @@ class Contact
 	public:
 
 		bool setInfo();
+		bool setQuestion(std::string str, void (Contact::*f)(std::string));
 		void setterFirstName(std::string firstName);
 		void setterLastName(std::string lastName);
 		void setterNickName(std::string nickName);
