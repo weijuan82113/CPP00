@@ -1,14 +1,19 @@
 
-#include <iostream>
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
-#include <iomanip>
-#include <string>
 
-void PhoneBook::add(int i)
+bool PhoneBook::add(int i)
 {
-	for ( ;!contact[i].setInfo(); )
+	if (!contact[i].setInfo())
+	{
+		contact[i].setterFirstName("");
+		contact[i].setterLastName("");
+		contact[i].setterNickName("");
+		contact[i].setterPhoneNumber("");
+		contact[i].setterDarkestSecret("");
 		std::cout << RED << "Can not input empty field" << RESET << std::endl;
+		return false;
+	}
+	return true;
 }
 
 Contact PhoneBook::getContact(int i)

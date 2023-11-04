@@ -1,8 +1,5 @@
 #include "Contact.hpp"
 
-#include <string>
-#include <iostream>
-
 bool Contact::setQuestion(std::string str, void (Contact::*f)(std::string))
 {
 	std::string input;

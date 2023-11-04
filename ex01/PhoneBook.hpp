@@ -2,6 +2,9 @@
  #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
@@ -17,7 +20,7 @@ class PhoneBook
 {
 	public:
 
-		void add(int i);
+		bool add(int i);
 		Contact getContact(int i);
 		void printInfo();
 		std::string truncate(std::string str);

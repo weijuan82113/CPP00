@@ -15,8 +15,8 @@ int main (void)
 			std::exit(EXIT_SUCCESS);
 		if (cmd == "ADD")
 		{
-			book.add(i);
-			i = (i + 1) % 8;
+			if (book.add(i))
+				i = (i + 1) % 8;
 		}
 		else if (cmd == "SEARCH")
 		{
