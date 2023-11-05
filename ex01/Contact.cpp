@@ -15,61 +15,61 @@ bool Contact::setQuestion(std::string str, void (Contact::*f)(std::string))
 
 bool Contact::setInfo()
 {
-	if (!this->setQuestion("Please input First Name:", &Contact::setterFirstName))
+	if (!setQuestion("Please input First Name:", &Contact::setterFirstName))
 		return(false);
-	if (!this->setQuestion("Please input Last Name:", &Contact::setterLastName))
+	if (!setQuestion("Please input Last Name:", &Contact::setterLastName))
 		return(false);
-	if (!this->setQuestion("Please input Nick Name:", &Contact::setterNickName))
+	if (!setQuestion("Please input Nick Name:", &Contact::setterNickName))
 		return(false);
-	if (!this->setQuestion("Please input Phone Number:", &Contact::setterPhoneNumber))
+	if (!setQuestion("Please input Phone Number:", &Contact::setterPhoneNumber))
 		return(false);
-	if (!this->setQuestion("Please input Darkest Secret:", &Contact::setterDarkestSecret))
+	if (!setQuestion("Please input Darkest Secret:", &Contact::setterDarkestSecret))
 		return(false);
 	return (true);
 }
 
 void Contact::setterFirstName(std::string firstname)
 {
-	this->_firstName = firstname;
+	_firstName = firstname;
 }
 
 void Contact::setterLastName(std::string lastname)
 {
-	this->_lastName = lastname;
+	_lastName = lastname;
 }
 
 void Contact::setterNickName(std::string nickname)
 {
-	this->_nickName = nickname;
+	_nickName = nickname;
 }
 
 void Contact::setterPhoneNumber(std::string phonenumber)
 {
-	this->_phoneNumber = phonenumber;
+	_phoneNumber = phonenumber;
 }
 
 void Contact::setterDarkestSecret(std::string darkestscrete)
 {
-	this->_darkestSecret = darkestscrete;
+	_darkestSecret = darkestscrete;
 }
 
 std::string Contact::getterFirstName()
 {
-	return (this->_firstName);
+	return (_firstName);
 }
 std::string Contact::getterLastName()
 {
-	return (this->_lastName);
+	return (_lastName);
 }
 std::string Contact::getterNickName()
 {
-	return (this->_nickName);
+	return (_nickName);
 }
 std::string Contact::getterPhoneNumber()
 {
-	return (this->_phoneNumber);
+	return (_phoneNumber);
 }
 std::string Contact::getterDarkestSecret()
 {
-	return (this->_darkestSecret);
+	return (_darkestSecret);
 }
